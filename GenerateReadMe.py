@@ -10,7 +10,7 @@ def main():
     a = Generate(getcwd(),0)
     print(a)
     f = open("README.md","w")
-    f.write("Archive  ")
+    f.write("Archive  \n")
     f.write("A collection of useful information and code snippets  ")
     f.write(a)
     f.close()
@@ -30,7 +30,7 @@ def Generate(folder_path,indent):
             continue
         this_path = join(folder_path,item)
         if isfile(this_path):
-            line_list.append(indentstr+item+"  ")
+            line_list.append(indentstr+item+"  \n")
         else:
             folders.append(item)
 
@@ -39,7 +39,7 @@ def Generate(folder_path,indent):
         if not str.startswith(folder,"."):
 
 
-            buffer += indentstr+folder + "  "
+            buffer += indentstr+folder + "  \n"
             n = (Generate(join(folder_path,folder),indent+1))
 
             s = ""

@@ -1,5 +1,7 @@
 Archive  
-A collection of useful information and code snippets  ComputerScience  
+A collection of useful information and code snippets  
+  
+ComputerScience  
  | Algorithms  
 Languages  
  | Cpp  

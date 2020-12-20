@@ -11,7 +11,7 @@ def main():
     print(a)
     f = open("README.md","w")
     f.write("Archive  \n")
-    f.write("A collection of useful information and code snippets  ")
+    f.write("A collection of useful information and code snippets  \n  \n")
     f.write(a)
     f.close()
 

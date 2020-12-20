@@ -32,7 +32,7 @@ def Generate(folder_path,indent):
         this_path = join(folder_path,item)
 
         if isfile(this_path):
-            link = "[link](" + this_path[-(len(this_path)-15):] + ")"
+            link = "[(link)](" + this_path[-(len(this_path)-15):] + ")"
             link = link.replace("\\","/")
             line_list.append(indentstr + "* " + item + link + "  \n")
         else:

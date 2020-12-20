@@ -30,8 +30,10 @@ def Generate(folder_path,indent):
             continue
 
         this_path = join(folder_path,item)
+
         if isfile(this_path):
-            line_list.append(indentstr + "* " + item + "  \n")
+            link = "[link](" + this_path[-(len(this_path)-7):] + ")"
+            line_list.append(indentstr + "* " + item + link + "  \n")
         else:
             folders.append(item)
 

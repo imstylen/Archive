@@ -23,14 +23,15 @@ def Generate(folder_path,indent):
 
     indentstr = ""
     for _ in range(0,indent):
-        indentstr += " | "
+        indentstr += "  "
 
     for item in items:
         if item in blacklist:
             continue
+
         this_path = join(folder_path,item)
         if isfile(this_path):
-            line_list.append(indentstr+item+"  \n")
+            line_list.append(indentstr + "*" + item + "  \n")
         else:
             folders.append(item)
 
@@ -39,7 +40,7 @@ def Generate(folder_path,indent):
         if not str.startswith(folder,"."):
 
 
-            buffer += indentstr+folder + "  \n"
+            buffer += indentstr + "*" + folder + "  \n"
             n = (Generate(join(folder_path,folder),indent+1))
 
             s = ""
